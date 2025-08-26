@@ -1,0 +1,6 @@
+/* Se sobre escribe la card dentro de container (con estilo incluso dentro de la propia linea HTML */
+.container .card {
+	background: #fff;
+	border: 1px solid #b2ebf2;
+	color: #333 !important;
+}

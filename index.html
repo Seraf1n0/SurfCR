@@ -4,29 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surf - Página Principal</title>
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/components.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/overrides.css">
 </head>
 <body>
+    <div class="container">
     <header>
         <figure>
             <img src="imgs/logo-surf.png" alt="Logo del sitio Surf Costa Rica" width="100" tabindex="0">
             <figcaption>Surf - Vive la ola</figcaption>
         </figure>
         <h1>Surf - Todo sobre el mundo del surf en Costa Rica</h1>
-        <nav>
-            <ul>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#lugares">Lugares</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#noticias">Noticias</a></li>
-                <li><a href="https://www.instagram.com/fedesurfcr/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la Federación de Surf de Costa Rica"> Instagram - Federación de Surf CR</a></li>
-            </ul>
-        </nav>
+                <nav class="main-nav">
+                    <!-- div para agrupar las secciones de navegación y el enlace externo -->
+                    <div class="nav-secciones">
+                        <a href="#eventos">Eventos</a>
+                        <a href="#productos">Productos</a>
+                        <a href="#lugares">Lugares</a>
+                        <a href="#contacto">Contacto</a>
+                        <a href="#noticias">Noticias</a>
+                    </div>
+                    <div class="nav-externo">
+                        <a href="https://www.instagram.com/fedesurfcr/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de la Federación de Surf de Costa Rica">Instagram - Federación de Surf CR</a>
+                    </div>
+                </nav>
     </header>
     <main>
         <section id="eventos">
             <h2>Eventos</h2>
-            <article>
+            <article class="card pos-relativa" style="border: 2px solid #0288d1;">
+                <span class="destacado-abs">¡Evento principal!</span>
+                <span class="tag">Nacional</span>
+                <span class="tag">Ranking</span>
+                <span class="tag">Juvenil</span>
                 <h3>Circuito Nacional de Surf Banco LAFISE 2025</h3>
                 <p>
                     El torneo reunirá a lo mejor del talento costarricense durante las cinco fechas que se competirán de febrero a junio de 2025. Además del gran impacto deportivo en los jóvenes de las comunidades costeras, el Circuito Nacional de Surf Banco LAFISE 2025 representa un beneficio económico en cada región sede del torneo, al movilizar al menos unas 4 mil personas entre atletas, familiares, patrocinadores, aficionados del surf y turistas.
@@ -43,7 +55,8 @@
         </section>
         <section id="productos">
             <h2>Productos para Surf</h2>
-            <article>
+            <div class="row">
+            <article class="card">
                 <h3>Tabla de Surf Clásica</h3>
                 <figure>
                     <img src="imgs/tablas-de-surf.jpeg" alt="Tabla de surf clásica sobre la arena" width="200" tabindex="-1">
@@ -51,7 +64,7 @@
                 </figure>
                 <p>Precio: ₡180,000</p>
             </article>
-            <article>
+            <article class="card">
                 <h3>Tabla Shortboard</h3>
                 <figure>
                     <img src="imgs/tabla-corta.jpg" alt="Tabla shortboard para surf maniobras rápidas" width="200">
@@ -59,7 +72,7 @@
                 </figure>
                 <p>Precio: ₡220,000</p>
             </article>
-            <article>
+            <article class="card">
                 <h3>Rashguard (camiseta de surf)</h3>
                 <figure>
                     <img src="imgs/rashguard.jpg" alt="Rashguard camiseta de surf protección solar" width="200">
@@ -67,7 +80,7 @@
                 </figure>
                 <p>Precio: ₡18,000</p>
             </article>
-            <article>
+            <article class="card">
                 <h3>Traje de neopreno corto</h3>
                 <figure>
                     <img src="imgs/traje-neopreno-corto.jpg" alt="Traje de neopreno corto para surfista" width="200">
@@ -75,7 +88,7 @@
                 </figure>
                 <p>Precio: ₡45,000</p>
             </article>
-            <article>
+            <article class="card">
                 <h3>Leash para tabla de surf</h3>
                 <figure>
                     <img src="imgs/leash-tabla-surf.jpg" alt="Leash para tabla de surf color negro" width="200">
@@ -83,6 +96,7 @@
                 </figure>
                 <p>Precio: ₡8,000</p>
             </article>
+            </div>
             <h3>Horarios de Tienda Física</h3>
             <table>
                 <thead>
@@ -111,7 +125,7 @@
             <h2>Lugares para Surfear</h2>
             <ol>
                 <li>
-                    <article>
+                    <article class="card">
                         <h3>Playa Hermosa (Pacífico Central)</h3>
                         <p>
                             Esta playa, cerca de Jacó, es famosa por sus olas potentes y es ideal para surfistas experimentados que buscan desafíos y menos multitudes.
@@ -119,7 +133,7 @@
                     </article>
                 </li>
                 <li>
-                    <article>
+                    <article class="card">
                         <h3>Playa Pavones (Pacífico Sur)</h3>
                         <p>
                             Ubicada en la provincia de Puntarenas, es conocida por sus olas izquierdas largas y consistentes, algunas de las más largas del mundo.
@@ -127,7 +141,7 @@
                     </article>
                 </li>
                 <li>
-                    <article>
+                    <article class="card">
                         <h3>Roca Bruja (Guanacaste)</h3>
                         <p>
                             Un lugar de surf de clase mundial, ubicado dentro del Parque Nacional Santa Rosa, es ideal para surfistas avanzados con olas desafiantes y entorno natural impresionante.
@@ -135,7 +149,7 @@
                     </article>
                 </li>
                 <li>
-                    <article>
+                    <article class="card">
                         <h3>Playa Grande (Guanacaste)</h3>
                         <p>
                             Una playa extensa con olas consistentes y grandes, popular entre surfistas experimentados y adecuada para el aprendizaje.
@@ -143,7 +157,7 @@
                     </article>
                 </li>
                 <li>
-                    <article>
+                    <article class="card">
                         <h3>Salsa Brava (Caribe)</h3>
                         <p>
                             Ubicada en Puerto Viejo, es famosa por sus olas poderosas y tubos impresionantes, considerada una de las playas más desafiantes de Costa Rica para surfistas.
@@ -154,91 +168,112 @@
         </section>
         <section id="contacto">
             <h2>Contacto</h2>
-            <form>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre"><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br>
-                <label for="motivo">Motivo de contacto:</label>
-                <select id="motivo" name="motivo">
-                    <option value="consulta">Consulta general</option>
-                    <option value="compra">Compra de productos</option>
-                    <option value="evento">Información de eventos</option>
-                    <option value="otro">Otro</option>
-                </select><br>
-                <label>¿Desea recibir novedades?</label><br>
-                <input type="radio" id="novedades-si" name="novedades" value="si">
-                <label for="novedades-si">Sí</label>
-                <input type="radio" id="novedades-no" name="novedades" value="no">
-                <label for="novedades-no">No</label><br>
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje"></textarea><br>
-                <button type="submit" aria-label="Enviar formulario de contacto">Enviar</button>
-            </form>
-            <aside>
-                <h3>Nuestras Redes Sociales: </h3>
-                <ul>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                </ul>
-            </aside>
+            <!-- div para agrupar el formulario y el aside en un mismo contenedor -->
+            <div class="contacto-flex">
+                <form>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre"><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br>
+                    <label for="motivo">Motivo de contacto:</label>
+                    <select id="motivo" name="motivo">
+                        <option value="consulta">Consulta general</option>
+                        <option value="compra">Compra de productos</option>
+                        <option value="evento">Información de eventos</option>
+                        <option value="otro">Otro</option>
+                    </select><br>
+                    <label>¿Desea recibir novedades?</label><br>
+                    <!-- Div para agrupar los radios -->
+                    <div class="radio-group">
+                        <input type="radio" id="novedades-si" name="novedades" value="si">
+                        <label for="novedades-si">Sí</label>
+                        <input type="radio" id="novedades-no" name="novedades" value="no">
+                        <label for="novedades-no">No</label>
+                    </div>
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje"></textarea><br>
+                    <button type="submit" class="btn" aria-label="Enviar formulario de contacto">Enviar</button>
+                </form>
+                <aside>
+                    <h3>Nuestras Redes Sociales: </h3>
+                    <ul>
+                        <li><a href="#" aria-label="Instagram de Surf Costa Rica">Instagram</a></li>
+                        <li><a href="#" aria-label="Facebook de Surf Costa Rica">Facebook</a></li>
+                    </ul>
+                </aside>
+            </div>
         </section>
-        <section id="noticias">
+        <section id="noticias" class="grid">
             <h2>Noticias</h2>
-            <article>
+            <div class="grid">
+            <article class="card" data-categoria="nacionales">
                 <h3>Federación Costarricense de Surf impulsa eventos de masificación en Guanacaste, Puntarenas y Limón</h3>
                 <p>
-                    La Federación Costarricense de Surf anuncia una serie de tres eventos gratuitos para el segundo semestre del 2025, dirigidos a fomentar la formación técnica, competitiva y comunitaria de los surfistas juveniles en Guanacaste, Puntarenas y Limón.
+                    La Federación Costarricense de Surf anuncia una serie de tres eventos gratuitos para el segundo semestre del 2025, dirigidos a fomentar la formación técnica, competitiva y comunitaria de los surfistas juveniles en Guanacaste, Puntarenas y Limón. 
+                    Además, se espera la participación de más de 500 jóvenes surfistas, entrenadores y familias, lo que representa una oportunidad única para el desarrollo del surf nacional. Las actividades incluirán talleres de seguridad acuática, charlas sobre sostenibilidad ambiental en las playas, competencias amistosas y exhibiciones de surf adaptado. 
+                    El evento contará con la presencia de surfistas profesionales costarricenses, quienes compartirán sus experiencias y motivarán a las nuevas generaciones. También se realizarán campañas de limpieza de playas y actividades de integración comunitaria, reforzando el compromiso del surf con el medio ambiente y la sociedad costarricense. 
+                    Este tipo de iniciativas posicionan a Costa Rica como un referente en la promoción del deporte y la protección de los recursos naturales, consolidando la imagen del país como destino líder para el surf responsable y sostenible en América Latina.
                 </p>
                 <footer>
                     <small>agosto 6, 2025 | Esteban Gillen | Nacionales</small>
                 </footer>
             </article>
-            <article>
+            <article class="card" data-categoria="internacionales">
                 <h3>Convocatoria selección nacional open para el Mundial ISA El Salvador 2025</h3>
                 <p>
-                    La selección nacional de surf de Costa Rica se alista para competir en el Mundial Open de la ISA El Salvador 2025, que se realizará del 5 al 14 de setiembre en las playas La Bocana y El Sunzal.
+                    La selección nacional de surf de Costa Rica se alista para competir en el Mundial Open de la ISA El Salvador 2025, que se realizará del 5 al 14 de setiembre en las playas La Bocana y El Sunzal. 
+                    El equipo nacional está conformado por atletas de alto rendimiento que han destacado en competencias internacionales y nacionales. Durante la preparación, los surfistas han participado en campamentos de entrenamiento intensivo, enfocados en mejorar su técnica, resistencia y estrategia competitiva. 
+                    La Federación ha coordinado sesiones de análisis de olas, simulacros de competencia y charlas motivacionales con ex campeones mundiales. El objetivo es lograr una destacada participación y fortalecer el espíritu de equipo, representando con orgullo a Costa Rica en el escenario mundial del surf.
                 </p>
                 <footer>
                     <small>agosto 6, 2025 | Esteban Gillen | ISA World Surfing Games 2025</small>
                 </footer>
             </article>
-            <article>
+            <article class="card" data-categoria="nacionales">
                 <h3>Darshan Antequera triunfa en Panamá y escala al segundo lugar del ranking latinoamericano</h3>
                 <p>
-                    El surfista costarricense Darshan Antequera ganó los dos torneos del ALAS Global Tour en Panamá, logrando el mejor resultado internacional de su carrera y subiendo al segundo lugar del ranking latinoamericano.
+                    El surfista costarricense Darshan Antequera ganó los dos torneos del ALAS Global Tour en Panamá, logrando el mejor resultado internacional de su carrera y subiendo al segundo lugar del ranking latinoamericano. 
+                    Su desempeño ha sido elogiado por entrenadores y medios especializados, destacando su constancia, técnica y mentalidad competitiva. Darshan ha inspirado a jóvenes surfistas costarricenses a perseguir sus sueños y a trabajar con disciplina para alcanzar el éxito internacional. 
+                    Próximamente, participará en nuevas fechas del tour latinoamericano, con el objetivo de alcanzar el primer lugar del ranking y seguir dejando en alto el nombre de Costa Rica en el surf mundial.
                 </p>
                 <footer>
                     <small>agosto 4, 2025 | Esteban Gillen | Nacionales</small>
                 </footer>
             </article>
-            <article>
+            <article class="card" data-categoria="internacionales">
                 <h3>Torneos en Panamá, Nicaragua y Santa Teresa llenan el calendario de los surfistas ticos</h3>
                 <p>
-                    Agosto será un mes clave para los surfistas costarricenses que buscan el título latinoamericano, con fechas del ALAS Global Tour en Panamá, Nicaragua y Santa Teresa.
+                    Agosto será un mes clave para los surfistas costarricenses que buscan el título latinoamericano, con fechas del ALAS Global Tour en Panamá, Nicaragua y Santa Teresa. 
+                    Las competencias reunirán a los mejores exponentes del surf latinoamericano, ofreciendo un espectáculo de alto nivel y fomentando el intercambio cultural entre los países participantes. 
+                    Los surfistas ticos se preparan con entrenamientos específicos para cada tipo de ola y condiciones climáticas, buscando sumar puntos valiosos en el ranking y consolidar su posición en el circuito internacional.
                 </p>
                 <footer>
                     <small>julio 29, 2025 | Esteban Gillen | Internacionales, Nacionales</small>
                 </footer>
             </article>
-            <article>
+            <article class="card" data-categoria="panamericano">
                 <h3>Lia Díaz es subcampeona panamericana de longboard</h3>
                 <p>
-                    Lia Díaz, surfista de Playa Negra, Guanacaste, obtuvo la medalla de plata en el Panamericano de Surf Guatemala 2025, logrando la primera medalla para Costa Rica en la disciplina de longboard.
+                    Lia Díaz, surfista de Playa Negra, Guanacaste, obtuvo la medalla de plata en el Panamericano de Surf Guatemala 2025, logrando la primera medalla para Costa Rica en la disciplina de longboard. 
+                    Su logro ha sido celebrado por la comunidad surfista nacional, que reconoce el esfuerzo y dedicación de Lia en su carrera deportiva. La surfista ha participado en múltiples eventos internacionales, posicionándose como una de las mejores exponentes del longboard femenino en América Latina. 
+                    Su ejemplo motiva a más mujeres a incursionar en el surf y a romper barreras en el deporte costarricense.
                 </p>
                 <footer>
                     <small>julio 11, 2025 | Esteban Gillen | Panamericano Surf 2025</small>
                 </footer>
             </article>
-            <article>
+            <article class="card" data-categoria="panamericano">
                 <h3>Siete ticos compitieron en el inicio de los Juegos Panamericanos de Surf 2025</h3>
                 <p>
-                    Los Juegos Panamericanos de Surf Guatemala 2025 iniciaron con la participación de siete surfistas costarricenses en las categorías de surf masculino y bodyboard, destacando el talento nacional en aguas internacionales.
+                    Los Juegos Panamericanos de Surf Guatemala 2025 iniciaron con la participación de siete surfistas costarricenses en las categorías de surf masculino y bodyboard, destacando el talento nacional en aguas internacionales. 
+                    La delegación costarricense ha mostrado un alto nivel de competitividad y trabajo en equipo, enfrentando a rivales de gran experiencia en el continente. 
+                    El evento es una vitrina para el surf nacional y una oportunidad para fortalecer lazos deportivos con otros países de la región.
                 </p>
                 <footer>
                     <small>julio 11, 2025 | Esteban Gillen | Panamericano Surf 2025</small>
                 </footer>
             </article>
+            </div>
         </section>
     </main>
     <footer>
@@ -248,5 +283,6 @@
         </blockquote>
         <p>&copy; 2025 Surf - Todos los derechos reservados.</p>
     </footer>
+    </div>
 </body>
 </html>

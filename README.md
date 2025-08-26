@@ -57,3 +57,46 @@ Se menciona que la página no posee metadatos de descrición, lo cual es cierto.
 * aria-label: Agrega una etiqueta para lectores de pantalla cuando el texto no es visible o no exista. Esto es importante para que los usuarios de lectores de pantalla sepan que función cumple un botón por ejemplo.
 
 * aria-labelledby: Esto asocia un elemento a otro para que sirva como etiqueta, por ejemplo un lector de pantalla puede leer "correo electrónico" si se accede al input de email.
+
+## CSS
+
+Se utilizaron los siguientes conceptos y selectores:
+
+### Selectores de tipo:
+Se aplicaron en elementos: `header`, `nav`, `section`, `main`, `img`, `footer` para dar estilos generales a la página.
+
+### Selectores de clase:
+Usados en `.card` para representar productos, eventos y noticias; `.btn` actualmente en el botón de Enviar formulario; `.container` para el contenedor principal; `.row`, `.grid` para organizar productos y noticias.
+
+### Selectores de ID:
+Aplicados en secciones principales como `#eventos`, `#productos`, `#lugares`, `#contacto`, `#noticias` para diferenciarlas una de otras.
+
+### Selectores de atributo:
+`a[target="_blank"]` en enlaces externos para diferenciar, `article[data-categoria]` para diferenciar noticias nacionales, internacionales y panamericanas.
+
+### Combinadores:
+`.card p` para párrafos en tarjetas, `header > nav` (hijo directo), `nav a + a` (adyacente) para separar enlaces entre sí. `tag ~ tag` (hermanos) en tags que siguen de otras tags, para diferencias usando el selector de hermanos
+
+### Pseudo-clases de estado:
+`:hover` en enlaces y botones, `:focus-visible` para accesibilidad en inputs y enlaces, `:active` en botones y enlaces.
+
+### Pseudo-clases estructurales:
+`:first-child` y `:last-child` en listas, `:nth-child(even/odd)` en filas de tablas y artículos, `:not(:first-child)` para bordes en tarjetas de grid.
+
+### Especificidad (!important e inline style):
+`.container .card` sobrescribe el fondo con `!important` en `overrides.css`, aunque el borde ya estaba definido en el HTML con atribto style="".
+
+### Box model:
+`box-sizing: border-box` en el html global, márgenes y paddings en `.container`, `.card`, `.grid`, `.row`
+
+### Overflow:
+En las tarjetas de noticias, se limita el alto y se usa `overflow-y: auto` para mostrar scroll cuando el texto es muy largo.
+
+### Flexbox:
+En el nav principal (`.main-nav`, `.nav-secciones`, `.nav-externo`) para alinear dentro del main-nav ambas secciones distintas por separado usando gaps.
+
+### Grid:
+En las secciones de noticias y productos (`.grid`, `.row`) para mostrar las tarjetas en columnas adaptables a la cantidad de elementos.
+
+### Position relative/absolute:
+En la primera tarjeta de eventos, `.pos-relativa` (relative) y `.destacado-abs` (absolute) para ubicar un pop up arriba a la derecha de la tarjeta de evento.
