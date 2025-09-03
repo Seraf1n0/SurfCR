@@ -1,0 +1,90 @@
+.radio-group {
+	display: flex;
+	align-items: center;
+	gap: 0.7em;
+	margin-bottom: 0.5em;
+}
+main {
+	max-width: 900px;
+	margin: 0 auto;
+	background: #fafafa;
+	border: 1px solid #b2ebf2;
+	border-radius: 1.5em;
+}
+
+header {
+	background: #fff;
+	border-bottom: 2px solid #4dd0e1;
+	text-align: center;
+	border: none;
+}
+
+section {
+	margin-bottom: 1.5em;
+	background: #f7f7f7;
+	border: 1px solid #b2ebf2;
+	border-radius: 2em;
+}
+/* Flex para formulario y aside en contacto (para que funcione como contenido independiente pero al lado de el formulario)*/
+.contacto-flex {
+	display: flex;
+	gap: 2em;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+.contacto-flex form {
+	flex: 2 1 350px;
+}
+.contacto-flex aside {
+	flex: 1 1 180px;
+	min-width: 160px;
+	max-width: 220px;
+}
+
+article {
+	margin-bottom: 1em;
+	background: #fff;
+	border: 1px solid #b2ebf2;
+	border-radius: 2em;
+}
+
+aside {
+	background: #e0f2f1;
+	margin-top: 1em;
+	border: none;
+	border-radius: 1.2em;
+}
+
+form {
+	background: #fff;
+	border: 1px solid #b2ebf2;
+	margin-bottom: 1em;
+	border-radius: 1.5em;
+	box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+	padding: 2em 2.5em 1.5em 2.5em;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 320px;
+	max-width: 420px;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+.contacto-flex label {
+	font-weight: 500;
+	margin-bottom: 0.2em;
+}
+.contacto-flex input,
+.contacto-flex select,
+.contacto-flex textarea {
+	border-radius: 0.7em;
+	border: 1px solid #b2ebf2;
+	padding: 0.5em 0.8em;
+	font-size: 1em;
+	margin-bottom: 0.2em;
+}
+.contacto-flex textarea {
+	min-height: 70px;
+	resize: vertical;
+}

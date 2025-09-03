@@ -1,0 +1,15 @@
+/* Pseudo-clases de estado para el botón principal */
+.btn:hover {
+	background: #00796b;
+	color: #fff;
+}
+
+.btn:focus-visible {
+	outline: 2px solid #ffb300;
+	outline-offset: 2px;
+}
+
+.btn:active {
+	background: #004d40;
+	color: #fff;
+}
