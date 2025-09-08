@@ -15,6 +15,11 @@
         <figure>
             <img src="imgs/logo-surf.png" alt="Logo del sitio Surf Costa Rica" width="100" tabindex="0">
             <figcaption>Surf - Vive la ola</figcaption>
+            <!-- Decorativos para desktp-->
+            <div class="hero-decorations" aria-hidden="true">
+                <span class="wave-icon">🌊</span>
+                <span class="palm-icon">🌴</span>
+            </div>
         </figure>
         <h1>Surf - Todo sobre el mundo del surf en Costa Rica</h1>
             <!--Botón toggle para menu hamburguesa-->
@@ -40,6 +45,29 @@
                 </div>
             </nav>
     </header>
+    <section class="hero" aria-label="Imagen principal de surf en Costa Rica">
+        <picture>
+            <!-- Desktop: ≥1024px Una imagen panoramica-->
+            <source media="(min-width: 1024px)" 
+                    srcset="imgs/hero-desktop.jpg" 
+                    type="image/jpeg">
+            
+            <!-- Tablet: ≥768px - Imagen horizontal cuadrada -->
+            <source media="(min-width: 768px)" 
+                    srcset="imgs/hero-tablet.jpg" 
+                    type="image/jpeg">
+            
+            <!-- Movil: default (≤767px) - umagen vertical -->
+            <img src="imgs/hero-mobile.jpg" 
+                alt="Surfista profesional montando una ola" 
+                class="hero-image">
+        </picture>
+        
+        <div class="hero-content">
+            <h2>Vive la Experiencia del Surf</h2>
+            <p>Descubre lo mejor sobre el Surf!</p>
+        </div>
+    </section>
     <main>
         <section id="eventos">
             <h2>Eventos</h2>
@@ -215,73 +243,73 @@
         <section id="noticias" class="grid">
             <h2>Noticias</h2>
             <div class="grid">
-            <article class="card" data-categoria="nacionales">
-                <h3>Federación Costarricense de Surf impulsa eventos de masificación en Guanacaste, Puntarenas y Limón</h3>
-                <p>
-                    La Federación Costarricense de Surf anuncia una serie de tres eventos gratuitos para el segundo semestre del 2025, dirigidos a fomentar la formación técnica, competitiva y comunitaria de los surfistas juveniles en Guanacaste, Puntarenas y Limón. 
-                    Además, se espera la participación de más de 500 jóvenes surfistas, entrenadores y familias, lo que representa una oportunidad única para el desarrollo del surf nacional. Las actividades incluirán talleres de seguridad acuática, charlas sobre sostenibilidad ambiental en las playas, competencias amistosas y exhibiciones de surf adaptado. 
-                    El evento contará con la presencia de surfistas profesionales costarricenses, quienes compartirán sus experiencias y motivarán a las nuevas generaciones. También se realizarán campañas de limpieza de playas y actividades de integración comunitaria, reforzando el compromiso del surf con el medio ambiente y la sociedad costarricense. 
-                    Este tipo de iniciativas posicionan a Costa Rica como un referente en la promoción del deporte y la protección de los recursos naturales, consolidando la imagen del país como destino líder para el surf responsable y sostenible en América Latina.
-                </p>
-                <footer>
-                    <small>agosto 6, 2025 | Esteban Gillen | Nacionales</small>
-                </footer>
-            </article>
-            <article class="card" data-categoria="internacionales">
-                <h3>Convocatoria selección nacional open para el Mundial ISA El Salvador 2025</h3>
-                <p>
-                    La selección nacional de surf de Costa Rica se alista para competir en el Mundial Open de la ISA El Salvador 2025, que se realizará del 5 al 14 de setiembre en las playas La Bocana y El Sunzal. 
-                    El equipo nacional está conformado por atletas de alto rendimiento que han destacado en competencias internacionales y nacionales. Durante la preparación, los surfistas han participado en campamentos de entrenamiento intensivo, enfocados en mejorar su técnica, resistencia y estrategia competitiva. 
-                    La Federación ha coordinado sesiones de análisis de olas, simulacros de competencia y charlas motivacionales con ex campeones mundiales. El objetivo es lograr una destacada participación y fortalecer el espíritu de equipo, representando con orgullo a Costa Rica en el escenario mundial del surf.
-                </p>
-                <footer>
-                    <small>agosto 6, 2025 | Esteban Gillen | ISA World Surfing Games 2025</small>
-                </footer>
-            </article>
-            <article class="card" data-categoria="nacionales">
-                <h3>Darshan Antequera triunfa en Panamá y escala al segundo lugar del ranking latinoamericano</h3>
-                <p>
-                    El surfista costarricense Darshan Antequera ganó los dos torneos del ALAS Global Tour en Panamá, logrando el mejor resultado internacional de su carrera y subiendo al segundo lugar del ranking latinoamericano. 
-                    Su desempeño ha sido elogiado por entrenadores y medios especializados, destacando su constancia, técnica y mentalidad competitiva. Darshan ha inspirado a jóvenes surfistas costarricenses a perseguir sus sueños y a trabajar con disciplina para alcanzar el éxito internacional. 
-                    Próximamente, participará en nuevas fechas del tour latinoamericano, con el objetivo de alcanzar el primer lugar del ranking y seguir dejando en alto el nombre de Costa Rica en el surf mundial.
-                </p>
-                <footer>
-                    <small>agosto 4, 2025 | Esteban Gillen | Nacionales</small>
-                </footer>
-            </article>
-            <article class="card" data-categoria="internacionales">
-                <h3>Torneos en Panamá, Nicaragua y Santa Teresa llenan el calendario de los surfistas ticos</h3>
-                <p>
-                    Agosto será un mes clave para los surfistas costarricenses que buscan el título latinoamericano, con fechas del ALAS Global Tour en Panamá, Nicaragua y Santa Teresa. 
-                    Las competencias reunirán a los mejores exponentes del surf latinoamericano, ofreciendo un espectáculo de alto nivel y fomentando el intercambio cultural entre los países participantes. 
-                    Los surfistas ticos se preparan con entrenamientos específicos para cada tipo de ola y condiciones climáticas, buscando sumar puntos valiosos en el ranking y consolidar su posición en el circuito internacional.
-                </p>
-                <footer>
-                    <small>julio 29, 2025 | Esteban Gillen | Internacionales, Nacionales</small>
-                </footer>
-            </article>
-            <article class="card" data-categoria="panamericano">
-                <h3>Lia Díaz es subcampeona panamericana de longboard</h3>
-                <p>
-                    Lia Díaz, surfista de Playa Negra, Guanacaste, obtuvo la medalla de plata en el Panamericano de Surf Guatemala 2025, logrando la primera medalla para Costa Rica en la disciplina de longboard. 
-                    Su logro ha sido celebrado por la comunidad surfista nacional, que reconoce el esfuerzo y dedicación de Lia en su carrera deportiva. La surfista ha participado en múltiples eventos internacionales, posicionándose como una de las mejores exponentes del longboard femenino en América Latina. 
-                    Su ejemplo motiva a más mujeres a incursionar en el surf y a romper barreras en el deporte costarricense.
-                </p>
-                <footer>
-                    <small>julio 11, 2025 | Esteban Gillen | Panamericano Surf 2025</small>
-                </footer>
-            </article>
-            <article class="card" data-categoria="panamericano">
-                <h3>Siete ticos compitieron en el inicio de los Juegos Panamericanos de Surf 2025</h3>
-                <p>
-                    Los Juegos Panamericanos de Surf Guatemala 2025 iniciaron con la participación de siete surfistas costarricenses en las categorías de surf masculino y bodyboard, destacando el talento nacional en aguas internacionales. 
-                    La delegación costarricense ha mostrado un alto nivel de competitividad y trabajo en equipo, enfrentando a rivales de gran experiencia en el continente. 
-                    El evento es una vitrina para el surf nacional y una oportunidad para fortalecer lazos deportivos con otros países de la región.
-                </p>
-                <footer>
-                    <small>julio 11, 2025 | Esteban Gillen | Panamericano Surf 2025</small>
-                </footer>
-            </article>
+                <article class="card" data-categoria="nacionales">
+                    <h3>Federación Costarricense de Surf impulsa eventos de masificación en Guanacaste, Puntarenas y Limón</h3>
+                    <p>
+                        La Federación Costarricense de Surf anuncia una serie de tres eventos gratuitos para el segundo semestre del 2025, dirigidos a fomentar la formación técnica, competitiva y comunitaria de los surfistas juveniles en Guanacaste, Puntarenas y Limón. 
+                        Además, se espera la participación de más de 500 jóvenes surfistas, entrenadores y familias, lo que representa una oportunidad única para el desarrollo del surf nacional. Las actividades incluirán talleres de seguridad acuática, charlas sobre sostenibilidad ambiental en las playas, competencias amistosas y exhibiciones de surf adaptado. 
+                        El evento contará con la presencia de surfistas profesionales costarricenses, quienes compartirán sus experiencias y motivarán a las nuevas generaciones. También se realizarán campañas de limpieza de playas y actividades de integración comunitaria, reforzando el compromiso del surf con el medio ambiente y la sociedad costarricense. 
+                        Este tipo de iniciativas posicionan a Costa Rica como un referente en la promoción del deporte y la protección de los recursos naturales, consolidando la imagen del país como destino líder para el surf responsable y sostenible en América Latina.
+                    </p>
+                    <footer>
+                        <small>agosto 6, 2025 | Esteban Gillen | Nacionales</small>
+                    </footer>
+                </article>
+                <article class="card" data-categoria="internacionales">
+                    <h3>Convocatoria selección nacional open para el Mundial ISA El Salvador 2025</h3>
+                    <p>
+                        La selección nacional de surf de Costa Rica se alista para competir en el Mundial Open de la ISA El Salvador 2025, que se realizará del 5 al 14 de setiembre en las playas La Bocana y El Sunzal. 
+                        El equipo nacional está conformado por atletas de alto rendimiento que han destacado en competencias internacionales y nacionales. Durante la preparación, los surfistas han participado en campamentos de entrenamiento intensivo, enfocados en mejorar su técnica, resistencia y estrategia competitiva. 
+                        La Federación ha coordinado sesiones de análisis de olas, simulacros de competencia y charlas motivacionales con ex campeones mundiales. El objetivo es lograr una destacada participación y fortalecer el espíritu de equipo, representando con orgullo a Costa Rica en el escenario mundial del surf.
+                    </p>
+                    <footer>
+                        <small>agosto 6, 2025 | Esteban Gillen | ISA World Surfing Games 2025</small>
+                    </footer>
+                </article>
+                <article class="card" data-categoria="nacionales">
+                    <h3>Darshan Antequera triunfa en Panamá y escala al segundo lugar del ranking latinoamericano</h3>
+                    <p>
+                        El surfista costarricense Darshan Antequera ganó los dos torneos del ALAS Global Tour en Panamá, logrando el mejor resultado internacional de su carrera y subiendo al segundo lugar del ranking latinoamericano. 
+                        Su desempeño ha sido elogiado por entrenadores y medios especializados, destacando su constancia, técnica y mentalidad competitiva. Darshan ha inspirado a jóvenes surfistas costarricenses a perseguir sus sueños y a trabajar con disciplina para alcanzar el éxito internacional. 
+                        Próximamente, participará en nuevas fechas del tour latinoamericano, con el objetivo de alcanzar el primer lugar del ranking y seguir dejando en alto el nombre de Costa Rica en el surf mundial.
+                    </p>
+                    <footer>
+                        <small>agosto 4, 2025 | Esteban Gillen | Nacionales</small>
+                    </footer>
+                </article>
+                <article class="card" data-categoria="internacionales">
+                    <h3>Torneos en Panamá, Nicaragua y Santa Teresa llenan el calendario de los surfistas ticos</h3>
+                    <p>
+                        Agosto será un mes clave para los surfistas costarricenses que buscan el título latinoamericano, con fechas del ALAS Global Tour en Panamá, Nicaragua y Santa Teresa. 
+                        Las competencias reunirán a los mejores exponentes del surf latinoamericano, ofreciendo un espectáculo de alto nivel y fomentando el intercambio cultural entre los países participantes. 
+                        Los surfistas ticos se preparan con entrenamientos específicos para cada tipo de ola y condiciones climáticas, buscando sumar puntos valiosos en el ranking y consolidar su posición en el circuito internacional.
+                    </p>
+                    <footer>
+                        <small>julio 29, 2025 | Esteban Gillen | Internacionales, Nacionales</small>
+                    </footer>
+                </article>
+                <article class="card" data-categoria="panamericano">
+                    <h3>Lia Díaz es subcampeona panamericana de longboard</h3>
+                    <p>
+                        Lia Díaz, surfista de Playa Negra, Guanacaste, obtuvo la medalla de plata en el Panamericano de Surf Guatemala 2025, logrando la primera medalla para Costa Rica en la disciplina de longboard. 
+                        Su logro ha sido celebrado por la comunidad surfista nacional, que reconoce el esfuerzo y dedicación de Lia en su carrera deportiva. La surfista ha participado en múltiples eventos internacionales, posicionándose como una de las mejores exponentes del longboard femenino en América Latina. 
+                        Su ejemplo motiva a más mujeres a incursionar en el surf y a romper barreras en el deporte costarricense.
+                    </p>
+                    <footer>
+                        <small>julio 11, 2025 | Esteban Gillen | Panamericano Surf 2025</small>
+                    </footer>
+                </article>
+                <article class="card" data-categoria="panamericano">
+                    <h3>Siete ticos compitieron en el inicio de los Juegos Panamericanos de Surf 2025</h3>
+                    <p>
+                        Los Juegos Panamericanos de Surf Guatemala 2025 iniciaron con la participación de siete surfistas costarricenses en las categorías de surf masculino y bodyboard, destacando el talento nacional en aguas internacionales. 
+                        La delegación costarricense ha mostrado un alto nivel de competitividad y trabajo en equipo, enfrentando a rivales de gran experiencia en el continente. 
+                        El evento es una vitrina para el surf nacional y una oportunidad para fortalecer lazos deportivos con otros países de la región.
+                    </p>
+                    <footer>
+                        <small>julio 11, 2025 | Esteban Gillen | Panamericano Surf 2025</small>
+                    </footer>
+                </article>
             </div>
         </section>
     </main>
