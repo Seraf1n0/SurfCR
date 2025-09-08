@@ -19,11 +19,15 @@
         <h1>Surf - Todo sobre el mundo del surf en Costa Rica</h1>
             <!--Botón toggle para menu hamburguesa-->
             <input type="checkbox" id="nav-toggle" class="nav-toggle visually-hidden">
-            <label for="nav-toggle" class="nav-toggle-label">
+            <label for="nav-toggle" class="nav-toggle-label" 
+                role="button" 
+                aria-controls="main-nav" 
+                aria-expanded="false"
+                aria-label="Abrir menú de navegación">
                 <span class="hamburger-icon"></span>
                 <span class="visually-hidden">Menú</span>
             </label>
-            <nav class="main-nav" id="main-nav">
+            <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
                 <div class="nav-secciones">
                     <a href="#eventos">Eventos</a>
                     <a href="#productos">Productos</a>
