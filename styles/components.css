@@ -1,15 +1,60 @@
 /* Pseudo-clases de estado para el botón principal */
 .btn:hover {
-	background: #00796b;
-	color: #fff;
+    background: #00796b;
+    color: #fff;
 }
 
 .btn:focus-visible {
-	outline: 2px solid #ffb300;
-	outline-offset: 2px;
+    outline: 2px solid #ffb300;
+    outline-offset: 2px;
 }
 
 .btn:active {
-	background: #004d40;
-	color: #fff;
+    background: #004d40;
+    color: #fff;
+}
+
+.card {
+    background: white;
+    padding: 1.2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+.card:focus-visible {
+    outline: 2.5px solid #ffb300;
+    outline-offset: 2px;
+}
+
+.card p {
+    margin: 0.8em 0;
+    line-height: 1.6;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Tablet (≥768px) */
+@media (min-width: 768px) {
+    .card {
+        padding: 1.5em;
+    }
+}
+
+/* Desktop (≥1024px) */
+@media (min-width: 1024px) {
+    .card {
+        padding: 2em;
+    }
 }

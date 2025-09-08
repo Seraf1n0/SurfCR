@@ -1,22 +1,18 @@
+/*  Movil first - Base (≤480px) el base */
 .radio-group {
-	display: flex;
-	align-items: center;
-	gap: 0.7em;
-	margin-bottom: 0.5em;
-}
-main {
-	max-width: 900px;
-	margin: 0 auto;
-	background: #fafafa;
-	border: 1px solid #b2ebf2;
-	border-radius: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    margin-bottom: 0.5em;
 }
 
-header {
-	background: #fff;
-	border-bottom: 2px solid #4dd0e1;
-	text-align: center;
-	border: none;
+main {
+    max-width: 100%;
+    margin: 0.5em auto;
+    background: #fafafa;
+    border: 1px solid #b2ebf2;
+    border-radius: 1em;
+    padding: 0.5em;
 }
 
 footer {
@@ -31,74 +27,222 @@ article footer {
     text-align: left;
     padding: 0.5em 0;
     margin-top: 1em;
+    border-radius: 2em;
 }
 
-section {
-	margin-bottom: 1.5em;
-	background: #f7f7f7;
-	border: 1px solid #b2ebf2;
-	border-radius: 2em;
+article footer section {
+    margin-bottom: 1em;
+    background: #f7f7f7;
+    border: 1px solid #b2ebf2;
+    border-radius: 1em;
+    padding: 0.7em 0.5em;
 }
-/* Flex para formulario y aside en contacto (para que funcione como contenido independiente pero al lado de el formulario)*/
+
+/* Mobile: 1 columna por defecto */
+.grid, 
+.row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2em;
+    padding: 0.5em;
+}
+
+/* gruds para movkl - Mobile first */
+#productos .row {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna movil */
+    gap: 1.2em;
+    align-items: stretch;
+}
+
+#noticias .grid {
+    display: grid;
+    grid-template-columns: 1fr; /* una columna para movil */
+    gap: 1.2em;
+    align-items: stretch;
+}
+
+/* Flex para formulario y aside en contacto (mobile first: columna) */
 .contacto-flex {
-	display: flex;
-	gap: 2em;
-	align-items: flex-start;
-	justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: stretch;
+    justify-content: flex-start;
 }
-.contacto-flex form {
-	flex: 2 1 350px;
-}
+
+.contacto-flex form,
 .contacto-flex aside {
-	flex: 1 1 180px;
-	min-width: 160px;
-	max-width: 220px;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
 }
 
-article {
-	margin-bottom: 1em;
-	background: #fff;
-	border: 1px solid #b2ebf2;
-	border-radius: 2em;
+.contacto-flex form {
+    flex: 2 1 350px;
 }
 
-aside {
-	background: #e0f2f1;
-	margin-top: 1em;
-	border: none;
-	border-radius: 1.2em;
+.contacto-flex aside {
+    flex: 1 1 180px;
+    min-width: 160px;
+    gap: 0.5em;
 }
 
-form {
-	background: #fff;
-	border: 1px solid #b2ebf2;
-	margin-bottom: 1em;
-	border-radius: 1.5em;
-	box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-	padding: 2em 2.5em 1.5em 2.5em;
-	margin-left: auto;
-	margin-right: auto;
-	min-width: 320px;
-	max-width: 420px;
-	display: flex;
-	flex-direction: column;
-	gap: 0.5em;
+.contacto-flex aside form {
+    background: #fff;
+    border: 1px solid #b2ebf2;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 1em 1em 0.7em 1em;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
 }
 
 .contacto-flex label {
-	font-weight: 500;
-	margin-bottom: 0.2em;
+    font-weight: 500;
+    margin-bottom: 0.2em;
 }
+
 .contacto-flex input,
 .contacto-flex select,
 .contacto-flex textarea {
-	border-radius: 0.7em;
-	border: 1px solid #b2ebf2;
-	padding: 0.5em 0.8em;
-	font-size: 1em;
-	margin-bottom: 0.2em;
+    border-radius: 0.7em;
+    border: 1px solid #b2ebf2;
+    padding: 0.5em 0.8em;
+    font-size: 1em;
+    margin-bottom: 0.2em;
 }
+
 .contacto-flex textarea {
-	min-height: 70px;
-	resize: vertical;
+    min-height: 70px;
+    resize: vertical;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0.7em;
+    margin: 0.7em auto;
+    background: #fafdff;
+    border: 1px solid #b2ebf2;
+    border-radius: 8px;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/*Movil grande (≥480px) */
+@media (min-width: 480px) {
+    .container {
+        padding: 1em;
+    }
+    
+    main {
+        padding: 1em;
+    }
+    
+    /* En telefono grande podría ser 2 columnas 1 solo para generico menor a este */
+    #productos .row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+    }
+}
+
+/* Tablet (≥768px) */
+@media (min-width: 768px) {
+    main {
+        max-width: 900px;
+        padding: 1.5em;
+        border-radius: 1.5em;
+    }
+    
+    section {
+        margin-bottom: 1.5em;
+        border-radius: 2em;
+        padding: 1.2em 1.5em;
+    }
+    
+    form {
+        padding: 2em 2.5em 1.5em 2.5em;
+        border-radius: 1.5em;
+        max-width: 420px;
+    }
+    
+    .contacto-flex {
+        flex-direction: row;
+        gap: 2em;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .contacto-flex form {
+        flex: 2 1 350px;
+        max-width: 420px;
+    }
+    
+    .contacto-flex aside {
+        flex: 1 1 180px;
+        min-width: 160px;
+        max-width: 220px;
+    }
+
+    /* 2 columnas para tablet */
+    .grid, 
+    .row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em;
+        padding: 1em;
+    }
+    
+    #productos .row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #noticias .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop (≥1024px) */
+@media (min-width: 1024px) {
+    main {
+        max-width: 1100px;
+        padding: 2em;
+        border-radius: 2em;
+    }
+    
+    section {
+        margin-bottom: 2em;
+        padding: 2em 2.5em;
+    }
+
+    /* 3 columnas para el desktop nomas*/
+    .grid, 
+    .row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+        padding: 1.5em;
+    }
+    
+    #productos .row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    #noticias .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contacto-flex textarea {
+        border-radius: 0.7em;
+        border: 1px solid #b2ebf2;
+        padding: 0.5em 0.8em;
+        font-size: 1em;
+        margin-bottom: 0.2em;
+        min-height: 70px;
+        resize: vertical;
+    }
 }
